@@ -1,26 +1,55 @@
 {
   "expo": {
-    "name": "TbafSDK38App",
-    "slug": "TbafSDK38App",
+    "name": "Tarablooms AF",
+    "slug": "TarabloomsAF",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "scheme": "myapp",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/images/icon.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "*assets/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tarablooms.applicationframework"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "package": "com.tarablooms.applicationframework",
+      "versionCode": 37,
+      "permissions": [
+        "ACCESS_FINE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDtB8kG06yyzO-GgAWJ678gpBWZ21e9T6o"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "*.tarablooms.com",
+              "pathPrefix": "/appframework"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
     }
   }
 }
